@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hemoglobe</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"> HEMOGLOBE</div>
+            <div class="nav-section">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <a href="/home">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">HEALTH CARE</a>
+                        </li>
+                        <li>
+                            <a href="/donate"> DONATE BLOOD</a>
+                        </li>
+                        <li>
+                            <a href="/api/blood/view"> RESULTS </a>
+                        </li>
+                        <li>
+                            <a href=""> ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- /////////////////////////////// -->
+
+        <!-- <div class="image">
+
+            <img src="/public/images/add.webp" alt="">
+
+        </div> -->
+
+        <div class="body">
+            <H2>RESULTS</H2>
+            <table>
+                <tr>
+                    <th></th>
+                    <TH>FULL NAME </TH>
+                    <TH>BLOOD GROUP</TH>
+                    <TH>GENDER</TH>
+                    <TH>DATE OF BIRTH</TH>
+                    <TH>PHONE NUMBER</TH>
+                    <TH>ADDRESS</TH>
+                    <th></th>
+                </tr>
+                <% details.forEach((result)=>{ %>
+
+                    <tr>
+                        <td><a href="/api/blood/view/<%= result._id %>"><img src="/upload/<%= result.image %>"
+                                    alt="</>"></a>
+                        </td>
+                        <td>
+                            <%= result.full_name %>
+                        </td>
+                        <td style="color: rgb(173, 35, 35); font-weight: 700;font-size: 14px;">
+                            <%= result.blood_group %>
+                        </td>
+                        <td>
+                            <%= result.gender %>
+                        </td>
+                        <td>
+                            <%= result.date_of_birth %>
+                        </td>
+                        <td>
+                            <%= result.phone_number %>
+                        </td>
+                        <td>
+                            <%= result.address %>
+                        </td>
+                        <td> <a href="/api/blood/view/<%= result._id %>"><i class="icon fa fa-eye" id="view"></i></a>
+                            <a href="/api/blood/delete/<%= result._id %>"><i class="icon fa fa-trash"
+                                    id="delete"></i></a>
+                        </td>
+
+                    </tr>
+                    <% }) %>
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+        <p>Follow us</p>
+        <i class="fa fa-instagram"></i> <i class="fa fa-twitter"></i>
+        <i class="fa fa-youtube"></i> <i class="fa fa-facebook"></i>
+        <i class="fa fa-tiktok"></i><i class="fa fa-linkedin"></i>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hemoglobe</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/donate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"> HEMOGLOBE</div>
+            <div class="nav-section">
+                <div class="list">
+                    <ul>
+                        <li>
+                            <a href="/home">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">HEALTH CARE</a>
+                        </li>
+                        <li>
+                            <a href="/donate"> DONATE BLOOD</a>
+                        </li>
+                        <li>
+                            <a href="/api/blood/view"> RESULTS </a>
+                        </li>
+                        <li>
+                            <a href=""> ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- /////////////////////////////// -->
+
+        <!-- <div class="image">
+
+            <img src="/public/images/add.webp" alt="">
+
+        </div> -->
+
+        <div class="content">
+            <div class="table">
+                <H1>DONOR &nbsp;DETAILS</H1>
+                <table>
+                    <form action="/api/blood/add" method="post" enctype="multipart/form-data">
+                        <tr>
+                        <tr>
+                            <td colspan="3" style="height: 60px;"><input type="file" name="image" id="file"
+                                    hidden><label for="file"><img src="/images/profile.png" alt="" id="uploadimage"></label></td>
+                        </tr>
+                        <td>
+                            Full Name<br>
+                            <input type="text" class="input" name="full_name">
+                        </td>
+                        <td>
+                            Blood Group<br>
+                            <input type="text" class="input" name="blood_group"
+                                style="font-weight:700; color: rgb(158, 0, 0);letter-spacing: 1px;">
+                        </td>
+                        <td> Gender<br>
+                            <input type="text" class="input" name="gender">
+                        </td>
+
+
+                        </tr>
+                        <tr>
+                            <td>
+                                Date of Birth<br>
+                                <input type="date" class="input" name="date_of_birth">
+                            </td>
+                            <td>
+                                Phone Number<br>
+                                <input type="tel" class="input" name="phone_number" minlength="3" maxlength="10">
+                            </td>
+                            <td>
+                                Address<br>
+                                <input type="text" class="input" name="address">
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="3"><input type="submit" value="Submit" id="btn"></td>
+                        </tr>
+                    </form>
+
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Follow us</p>
+            <i class="fa fa-instagram"></i> <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i> <i class="fa fa-facebook"></i>
+            <i class="fa fa-tiktok"></i><i class="fa fa-linkedin"></i>
+        </div>
+
+    </div>
+</body>
+
+</html>
