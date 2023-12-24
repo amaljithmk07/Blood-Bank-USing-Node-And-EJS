@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const bloodbankschema = new mongoose.Schema({
+const userbloodschema = new mongoose.Schema({
     full_name: {
         type: String,
         required: true,
@@ -31,4 +31,4 @@ const bloodbankschema = new mongoose.Schema({
 
 
 
-module.exports = mongoose.model('Results', bloodbankschema)
+module.exports = mongoose.model('Results', userbloodschema)

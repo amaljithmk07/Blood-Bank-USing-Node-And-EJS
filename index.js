@@ -1,7 +1,7 @@
 const express = require('express')
 const server = express()
 const mongoose = require('mongoose')
-const bloodroutes = require('./router/bloodroutes')
+const userbloodroutes = require('./router/userbloodroutes')
 
 mongoose.connect('mongodb+srv://amaljithmk123:0123456789@bloodbank.obqh4he.mongodb.net/BloodBank', {
     useNewUrlParser: true,
@@ -25,7 +25,7 @@ server.use(express.urlencoded({ extended: true }))
 
 
 
-server.use('/api/blood', bloodroutes)
+server.use('/api/user', userbloodroutes)
 
 server.get('/home', (req, res) => {
     res.render('home')
